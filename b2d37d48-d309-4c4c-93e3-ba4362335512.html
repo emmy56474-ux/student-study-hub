@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Hub - JAMB & WAEC Exam Preparation</title>
+    <meta name="description" content="Free study resources for Nigerian secondary school students preparing for JAMB, WAEC exams. Get study tips, subject guides, and timetable examples.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        secondary: "#3b82f6",
+                        accent: "#10b981",
+                        light: "#f8fafc",
+                        dark: "#1e293b"
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .subject-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white font-inter text-gray-700">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-dark font-poppins">Student Study Hub</h1>
+                        <p class="text-xs text-gray-500">JAMB & WAEC Preparation</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                    <a href="#home" class="nav-link text-dark font-medium hover:text-primary transition-colors duration-200" onclick="showSection('home')">Home</a>
+                    <a href="#subjects" class="nav-link text-dark font-medium hover:text-primary transition-colors duration-200" onclick="showSection('subjects')">Subjects</a>
+                    <a href="#study-tips" class="nav-link text-dark font-medium hover:text-primary transition-colors duration-200" onclick="showSection('study-tips')">Study Tips</a>
+                    <a href="#timetable" class="nav-link text-dark font-medium hover:text-primary transition-colors duration-200" onclick="showSection('timetable')">Timetable Guide</a>
+                    <a href="#contact" class="nav-link text-dark font-medium hover:text-primary transition-colors duration-200" onclick="showSection('contact')">Contact</a>
+                </div>
+                
+                <div class="mt-4 md:mt-0">
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-secondary transition-colors duration-200 flex items-center space-x-2">
+                        <i class="fas fa-book-open"></i>
+                        <span>Start Learning</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="gradient-bg py-12 md:py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-sm mb-6">
+                        <i class="fas fa-star text-accent"></i>
+                        <span class="text-sm font-medium">For Nigerian Secondary Students</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6 font-poppins">
+                        Study Smart, <span class="text-primary">Succeed Faster</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                        Your complete guide to acing JAMB and WAEC exams. Get free study resources, 
+                        expert tips, and practical guides designed specifically for Nigerian students.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary transition-colors duration-200 flex items-center justify-center space-x-2">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Explore Subjects</span>
+                        </button>
+                        <button class="bg-white text-primary border border-primary px-8 py-3 rounded-lg font-medium hover:bg-light transition-colors duration-200 flex items-center justify-center space-x-2">
+                            <i class="fas fa-download"></i>
+                            <span>Download Resources</span>
+                        </button>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-book text-primary text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-dark mb-2">4 Core Subjects</h3>
+                            <p class="text-sm text-gray-600">Physics, Chemistry, Math, English</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-clock text-accent text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-dark mb-2">Study Plans</h3>
+                            <p class="text-sm text-gray-600">Daily & weekly timetables</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-lightbulb text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-dark mb-2">Expert Tips</h3>
+                            <p class="text-sm text-gray-600">Proven study methods</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-trophy text-red-600 text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-dark mb-2">Exam Ready</h3>
+                            <p class="text-sm text-gray-600">JAMB & WAEC focused</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subjects Section -->
+        <section id="subjects" class="py-16 bg-light">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4 font-poppins">Core Subjects for JAMB & WAEC</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Master these essential subjects with our comprehensive study guides and tips</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Physics Card -->
+                    <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-2 bg-blue-500"></div>
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-atom text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Physics</h3>
+                            <p class="text-gray-600 mb-4">Understand fundamental concepts in mechanics, electricity, and waves with practical examples.</p>
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Focus on formulas and units</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Practice numerical problems</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Understand practical applications</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-50 text-primary py-2 rounded-lg font-medium hover:bg-blue-100 transition-colors duration-200">
+                                Study Physics
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Chemistry Card -->
+                    <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-2 bg-green-500"></div>
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-flask text-green-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Chemistry</h3>
+                            <p class="text-gray-600 mb-4">Master organic and inorganic chemistry, chemical equations, and laboratory techniques.</p>
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Memorize periodic table trends</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Practice balancing equations</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Understand reaction mechanisms</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-green-50 text-green-700 py-2 rounded-lg font-medium hover:bg-green-100 transition-colors duration-200">
+                                Study Chemistry
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Mathematics Card -->
+                    <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-2 bg-purple-500"></div>
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-calculator text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Mathematics</h3>
+                            <p class="text-gray-600 mb-4">Excel in algebra, geometry, trigonometry, and calculus with step-by-step solutions.</p>
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Practice daily calculations</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Master problem-solving techniques</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Learn time-saving shortcuts</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-purple-50 text-purple-700 py-2 rounded-lg font-medium hover:bg-purple-100 transition-colors duration-200">
+                                Study Mathematics
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- English Card -->
+                    <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-2 bg-red-500"></div>
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-language text-red-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">English</h3>
+                            <p class="text-gray-600 mb-4">Improve comprehension, essay writing, grammar, and oral English skills for exams.</p>
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Read comprehension passages</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Practice essay writing</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check text-accent mr-2"></i>
+                                    <span>Master grammar rules</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-red-50 text-red-700 py-2 rounded-lg font-medium hover:bg-red-100 transition-colors duration-200">
+                                Study English
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Tips Section -->
+        <section id="study-tips" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4 font-poppins">Effective Study Tips & Methods</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Proven strategies to help you study smarter and achieve better results</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Time Management -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border border-blue-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">Time Management</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>Use the Pomodoro Technique: 25 minutes study, 5 minutes break</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>Prioritize difficult subjects when your mind is fresh</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>Set specific goals for each study session</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>Avoid multitasking - focus on one subject at a time</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Study Methods -->
+                    <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border border-green-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-brain text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">Study Methods</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Active recall: Test yourself without looking at notes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Spaced repetition: Review material at increasing intervals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Feynman Technique: Teach concepts to someone else</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Create mind maps for complex topics</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Exam Preparation -->
+                    <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-edit text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">Exam Preparation</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span>Solve past questions under timed conditions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span>Identify and focus on weak areas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span>Get adequate sleep before exam day</span>
+                            </li>
+                            <li class="flex items-start">
